@@ -18,13 +18,12 @@ for i in range(m):
 for i in range(m):
     if q[i] == 0:
         last[i] = n - t[i] + 1
-        pre = p[i]
+        pre = p[i] - 1
         end = last[i]
-        while pre > 0:
-            print(pre)
+        while pre >= 0:
             last[pre] = min(last[pre], end - t[pre])
-            pre = p[pre] - 1
             end = last[pre]
+            pre = p[pre] - 1
 
 
 # foreach first and print each element
