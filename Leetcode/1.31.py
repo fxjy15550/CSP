@@ -7,7 +7,7 @@ class Solution(object):
         n = len(grid)
         for i in range(n):
             for j in range(n):
-                if i==j or i+j==n-1:
+                if i == j or i + j == n - 1:
                     if grid[i][j] == 0:
                         return False
                 else:
@@ -16,7 +16,7 @@ class Solution(object):
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     s = Solution()
     s.checkXMatrix(grid)
